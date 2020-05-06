@@ -16,7 +16,7 @@ agent any
 	       {	
                     withGradle
 		       {
-    				sh 'gradle build --info'
+    				sh './gradlew clean build'
 		       }
                }
           }
