@@ -7,7 +7,10 @@ agent any
 	  {
                steps
 	       {	
-                    sh 
+                    withGradle
+		       {
+    				sh 'gradle build --info'
+		       }
                }
           }
      }
