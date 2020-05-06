@@ -3,7 +3,14 @@ pipeline
 agent any
      stages
      {
-          stage("SCM Checkout")
+	  stage ('download the source code from SCM')
+          {
+          	steps
+      		{
+        		git branch: 'master', url: 'https://github.com/RahulParkhi/gradle-calculator.git'
+      		}
+    	  }
+	  stage("Run Gradle command")
 	  {
                steps
 	       {	
